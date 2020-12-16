@@ -4,11 +4,11 @@
 Реализовать некопируемый перемещаемый шаблон класса **stack** с методами `pop`, `push`, `head`. 
 ```cpp
 template <typename T>
-class Stack
+class The_stack
 {
 public:
-  void push(T&& value);
-  void push(const T& value);
+  void push(T&& the_value_of);
+  void push(const T& the_value_of);
   void pop();
   const T& head() const;
 };
@@ -16,18 +16,18 @@ public:
 ⚠️ *Стандартными контейнерами пользоваться **запрещено**.*
 
 ## Задание 2
-Реализовать некопируемый перемещаемый шаблон класса `Stack` для некопируемых перемещаемых типов с методами:
+Реализовать некопируемый перемещаемый шаблон класса `The_stack` для некопируемых перемещаемых типов с методами:
 * `push_emplace`, принимающего те же аргументы, что и конструктор для `T`, где `T` - пареметр шаблона;
 * `head`, возвращающего ссылку на верхушку стека;
 * `pop`, выполняющего снятие элемента с верхушки стека.
 ```cpp
 template <typename T>
-class Stack
+class The_stack
 {
 public:
   template <typename ... Args>
-  void push_emplace(Args&&... value);
-  void push(T&& value);
+  void push_emplace(Args&&... the_value_of);
+  void push(T&& the_value_of);
   const T& head() const;
   T pop();
 };
